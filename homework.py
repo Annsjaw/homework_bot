@@ -34,7 +34,7 @@ def send_message(bot, message) -> None:
     """
     try:
         logger.info('Бот отправляет сообщение в Telegram')
-        # bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message)
+        bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message)
     except Exception as error:
         raise Exception(f'Сбой при отправке сообщения в Telegram {error}')
     else:
